@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "GitHub Action to Generate api.json",
   "main": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "build": "ncc build index.js -o dist"
   },
