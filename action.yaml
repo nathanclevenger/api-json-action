@@ -1,0 +1,5 @@
+name: 'api.json'
+description: 'Generate api.json file'
+runs:
+  using: 'node16'
+  main: 'index.js'
