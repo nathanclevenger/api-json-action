@@ -8,7 +8,7 @@ try {
   const config = yaml.parse('_config.yaml')
   const payload = JSON.stringify({
     icon: config.icon,
-    name: config.name ?? github.context.payload.repository.description,
+    name: config.name ?? github.context.payload.repository.name,
     description: config.description ?? github.context.payload.repository.description,
     url: config.url ?? github.context.payload.repository.homepage + '/api',
     type: 'https://apis.do/' + (config.type ?? 'api'),
