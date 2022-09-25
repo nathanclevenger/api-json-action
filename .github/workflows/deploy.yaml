@@ -11,4 +11,13 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v3
+      - name: Get dependencies
+        run: 'yarn'
+      - name: Build output
+        run: 'yarn build'
       - uses: ./dist/
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "🚀 Built Successfully"
+          # commit_options: '--amend --no-edit'
+          push_options: --force
