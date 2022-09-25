@@ -1,6 +1,6 @@
 name: 'api.json'
 description: 'Generate api.json file'
-icon: box
+icon: 'box'
 runs:
   using: 'node16'
   main: 'index.js'
