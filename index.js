@@ -10,7 +10,7 @@ try {
   // core.setOutput("time", time)
   // Get the JSON webhook payload for the event that triggered the workflow
   const config = yaml.parse('_config.yaml')
-//   const payload = JSON.stringify(github.context.payload, undefined, 2)
+  const payload = JSON.stringify(github.context.payload, undefined, 2)
   fs.writeFileSync('api.json', JSON.stringify({
     icon: '入',
     name: 'lambda.do',
