@@ -17836,7 +17836,7 @@ try {
   const config = yaml__WEBPACK_IMPORTED_MODULE_3__.parse('_config.yaml')
   const payload = JSON.stringify({
     icon: config.icon,
-    name: config.name ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.description,
+    name: config.name ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.name,
     description: config.description ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.description,
     url: config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage + '/api',
     type: 'https://apis.do/' + (config.type ?? 'api'),

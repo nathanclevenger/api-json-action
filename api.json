@@ -1,5 +1,5 @@
 {
-  "name": "GitHub Action to Generate api.json file",
+  "name": "api-json-action",
   "description": "GitHub Action to Generate api.json file",
   "url": "null/api",
   "type": "https://apis.do/api",
