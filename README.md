@@ -19,6 +19,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "🚀 api.json Generated Successfully"
-          # commit_options: '--amend --no-edit'
-          push_options: --force
 ```
