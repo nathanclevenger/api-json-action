@@ -15,7 +15,7 @@ jobs:
         run: 'yarn'
       - name: Build output
         run: 'yarn build'
-      - uses: ./dist/
+      - uses: ./
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "🚀 Built Successfully"
