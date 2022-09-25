@@ -1,0 +1,25 @@
+{
+  "name": "generate-api-json",
+  "version": "0.1.0",
+  "description": "GitHub Action to Generate api.json",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanclevenger/api-json-action.git"
+  },
+  "author": "Driv.ly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanclevenger/api-json-action"
+  },
+  "homepage": "https://github.com/nathanclevenger/api-json-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/github": "^5.0.3",
+    "@vercel/ncc": "^0.34.0",
+    "node-fetch": "^3.2.10"
+  }
+}
