@@ -4,30 +4,26 @@ import github from '@actions/github'
 import yaml from 'yaml'
 
 try {
-  // const nameToGreet = core.getInput('who-to-greet')
-  // console.log(`Hello ${nameToGreet}!`)
   const time = (new Date()).toTimeString()
-  // core.setOutput("time", time)
-  // Get the JSON webhook payload for the event that triggered the workflow
   const config = yaml.parse('_config.yaml')
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  fs.writeFileSync('api.json', JSON.stringify({
-    icon: '入',
-    name: 'lambda.do',
-    description: 'Instant Globally-distributed Lambda Functions as APIs',
-    url: 'https://lambda.to/api',
-    type: 'https://apis.do/lambda',
-    endpoints: {
-      listSources: 'https://lambda.to/sources',
+  const payload = JSON.stringify({
+    icon: config.icon,
+    name: config.name ?? github.context.payload.repository.description,
+    description: config.description ?? github.context.payload.repository.description,
+    url: config.url ?? github.context.payload.repository.homepage + '/api',
+    type: 'https://apis.do/' + (config.type ?? 'api'),
+    endpoints: config.endpoints ?? {
+      api: config.url ?? github.context.payload.repository.homepage + '/api',
     },
-    site: 'https://lambda.to',
-    login: 'https://lambda.to/login',
-    signup: 'https://lambda.to/signup',
-    subscribe: 'https://lambda.to/subscribe',
-    repo: 'https://github.com/nathanclevenger/lambda.to',
-    config,
-  }, null, 2))
-  console.log(`The event payload: ${payload}`)
+    site: (config.url ?? github.context.payload.repository.homepage),
+    login: (config.url ?? github.context.payload.repository.homepage) + '/login',
+    signup: (config.url ?? github.context.payload.repository.homepage) + '/signup',
+    subscribe: (config.url ?? github.context.payload.repository.homepage) + '/subscribe',
+    repo: github.context.payload.repository.url,
+    ...config.apiMetadata,
+  }, null, 2)
+  fs.writeFileSync('api.json', payload)
+  console.log(`The generated api.json: ${payload}`)
 } catch (error) {
   core.setFailed(error.message)
 }
