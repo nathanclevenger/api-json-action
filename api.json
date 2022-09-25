@@ -1,16 +1,14 @@
 {
-  "icon": "入",
-  "name": "lambda.do",
-  "description": "Instant Globally-distributed Lambda Functions as APIs",
-  "url": "https://lambda.to/api",
-  "type": "https://apis.do/lambda",
+  "name": "GitHub Action to Generate api.json file",
+  "description": "GitHub Action to Generate api.json file",
+  "url": "null/api",
+  "type": "https://apis.do/api",
   "endpoints": {
-    "listSources": "https://lambda.to/sources"
+    "api": "null/api"
   },
-  "site": "https://lambda.to",
-  "login": "https://lambda.to/login",
-  "signup": "https://lambda.to/signup",
-  "subscribe": "https://lambda.to/subscribe",
-  "repo": "https://github.com/nathanclevenger/lambda.to",
-  "config": "_config.yaml"
+  "site": null,
+  "login": "null/login",
+  "signup": "null/signup",
+  "subscribe": "null/subscribe",
+  "repo": "https://github.com/nathanclevenger/api-json-action"
 }

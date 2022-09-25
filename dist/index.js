@@ -17832,30 +17832,26 @@ var __webpack_exports__ = {};
 
 
 try {
-  // const nameToGreet = core.getInput('who-to-greet')
-  // console.log(`Hello ${nameToGreet}!`)
   const time = (new Date()).toTimeString()
-  // core.setOutput("time", time)
-  // Get the JSON webhook payload for the event that triggered the workflow
   const config = yaml__WEBPACK_IMPORTED_MODULE_3__.parse('_config.yaml')
-  const payload = JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload, undefined, 2)
-  fs__WEBPACK_IMPORTED_MODULE_0__.writeFileSync('api.json', JSON.stringify({
-    icon: '入',
-    name: 'lambda.do',
-    description: 'Instant Globally-distributed Lambda Functions as APIs',
-    url: 'https://lambda.to/api',
-    type: 'https://apis.do/lambda',
-    endpoints: {
-      listSources: 'https://lambda.to/sources',
+  const payload = JSON.stringify({
+    icon: config.icon,
+    name: config.name ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.description,
+    description: config.description ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.description,
+    url: config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage + '/api',
+    type: 'https://apis.do/' + (config.type ?? 'api'),
+    endpoints: config.endpoints ?? {
+      api: config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage + '/api',
     },
-    site: 'https://lambda.to',
-    login: 'https://lambda.to/login',
-    signup: 'https://lambda.to/signup',
-    subscribe: 'https://lambda.to/subscribe',
-    repo: 'https://github.com/nathanclevenger/lambda.to',
-    config,
-  }, null, 2))
-  console.log(`The event payload: ${payload}`)
+    site: (config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage),
+    login: (config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage) + '/login',
+    signup: (config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage) + '/signup',
+    subscribe: (config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage) + '/subscribe',
+    repo: _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.url,
+    ...config.apiMetadata,
+  }, null, 2)
+  fs__WEBPACK_IMPORTED_MODULE_0__.writeFileSync('api.json', payload)
+  console.log(`The generated api.json: ${payload}`)
 } catch (error) {
   _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(error.message)
 }
