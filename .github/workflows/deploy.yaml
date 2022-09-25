@@ -19,5 +19,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "🚀 Built Successfully"
-          # commit_options: '--amend --no-edit'
           push_options: --force
