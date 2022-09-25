@@ -2,7 +2,7 @@
   "name": "generate-api-json",
   "version": "0.1.0",
   "description": "GitHub Action to Generate api.json",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "ncc build index.js -o dist"
   },
