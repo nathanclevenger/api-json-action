@@ -1,7 +1,7 @@
 {
-  "after": "7461642fd9aa31afb9a7cc0ea665b6f954650c42",
+  "after": "b15305a870261e85ec6a83749345295b72fe4d10",
   "base_ref": null,
-  "before": "e52472c9dff786700f7f6dc8c085d76a574e77db",
+  "before": "a257a638cea6908d41042bfa827a6a6b5b94680a",
   "commits": [
     {
       "author": {
@@ -15,14 +15,14 @@
         "username": "web-flow"
       },
       "distinct": true,
-      "id": "7461642fd9aa31afb9a7cc0ea665b6f954650c42",
-      "message": "Update index.js",
-      "timestamp": "2022-09-25T14:54:14-05:00",
-      "tree_id": "3562db43e71f50970df56c5f8fb6ec2f70bf5f1a",
-      "url": "https://github.com/nathanclevenger/api-json-action/commit/7461642fd9aa31afb9a7cc0ea665b6f954650c42"
+      "id": "b15305a870261e85ec6a83749345295b72fe4d10",
+      "message": "Update package.json",
+      "timestamp": "2022-09-25T14:56:29-05:00",
+      "tree_id": "f0df4ecf766be97b88f8e0cd4fd03ebaaa95679a",
+      "url": "https://github.com/nathanclevenger/api-json-action/commit/b15305a870261e85ec6a83749345295b72fe4d10"
     }
   ],
-  "compare": "https://github.com/nathanclevenger/api-json-action/compare/e52472c9dff7...7461642fd9aa",
+  "compare": "https://github.com/nathanclevenger/api-json-action/compare/a257a638cea6...b15305a87026",
   "created": false,
   "deleted": false,
   "forced": false,
@@ -38,11 +38,11 @@
       "username": "web-flow"
     },
     "distinct": true,
-    "id": "7461642fd9aa31afb9a7cc0ea665b6f954650c42",
-    "message": "Update index.js",
-    "timestamp": "2022-09-25T14:54:14-05:00",
-    "tree_id": "3562db43e71f50970df56c5f8fb6ec2f70bf5f1a",
-    "url": "https://github.com/nathanclevenger/api-json-action/commit/7461642fd9aa31afb9a7cc0ea665b6f954650c42"
+    "id": "b15305a870261e85ec6a83749345295b72fe4d10",
+    "message": "Update package.json",
+    "timestamp": "2022-09-25T14:56:29-05:00",
+    "tree_id": "f0df4ecf766be97b88f8e0cd4fd03ebaaa95679a",
+    "url": "https://github.com/nathanclevenger/api-json-action/commit/b15305a870261e85ec6a83749345295b72fe4d10"
   },
   "pusher": {
     "email": "nateclev@gmail.com",
@@ -136,7 +136,7 @@
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/nathanclevenger/api-json-action/pulls{/number}",
-    "pushed_at": 1664135654,
+    "pushed_at": 1664135789,
     "releases_url": "https://api.github.com/repos/nathanclevenger/api-json-action/releases{/id}",
     "size": 15,
     "ssh_url": "git@github.com:nathanclevenger/api-json-action.git",
