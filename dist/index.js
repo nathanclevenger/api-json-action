@@ -17835,7 +17835,7 @@ try {
   const time = (new Date()).toTimeString()
   const config = yaml__WEBPACK_IMPORTED_MODULE_3__.parse('_config.yaml')
   const payload = JSON.stringify({
-    icon: config.icon,
+    icon: config.icon ?? '🚀',
     name: config.name ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.name,
     description: config.description ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.description,
     url: config.url ?? _actions_github__WEBPACK_IMPORTED_MODULE_2__.context.payload.repository.homepage + '/api',

@@ -1,4 +1,5 @@
 {
+  "icon": "🚀",
   "name": "api-json-action",
   "description": "GitHub Action to Generate api.json file",
   "url": "https://github.com/marketplace/actions/api-json/api",
