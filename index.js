@@ -7,7 +7,7 @@ try {
   const time = (new Date()).toTimeString()
   const config = yaml.parse('_config.yaml')
   const payload = JSON.stringify({
-    icon: config.icon,
+    icon: config.icon ?? '🚀',
     name: config.name ?? github.context.payload.repository.name,
     description: config.description ?? github.context.payload.repository.description,
     url: config.url ?? github.context.payload.repository.homepage + '/api',
