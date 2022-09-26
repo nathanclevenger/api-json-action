@@ -1,14 +1,14 @@
 {
   "name": "api-json-action",
   "description": "GitHub Action to Generate api.json file",
-  "url": "null/api",
+  "url": "https://github.com/marketplace/actions/api-json/api",
   "type": "https://apis.do/api",
   "endpoints": {
-    "api": "null/api"
+    "api": "https://github.com/marketplace/actions/api-json/api"
   },
-  "site": null,
-  "login": "null/login",
-  "signup": "null/signup",
-  "subscribe": "null/subscribe",
+  "site": "https://github.com/marketplace/actions/api-json",
+  "login": "https://github.com/marketplace/actions/api-json/login",
+  "signup": "https://github.com/marketplace/actions/api-json/signup",
+  "subscribe": "https://github.com/marketplace/actions/api-json/subscribe",
   "repo": "https://github.com/nathanclevenger/api-json-action"
 }
