@@ -1,5 +1,5 @@
 # api-json-action
-GitHub Action to Generate api.json file
+GitHub Action to Generate api.json file at `.github/workflows/generate.yaml`
 
 ```yaml
 name: Generate api.json
